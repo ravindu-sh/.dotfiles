@@ -1,3 +1,15 @@
 modmap:
   - remap:
-      CapsLock: Esc
+      102ND: RIGHTALT
+      RIGHTALT: RIGHTMETA
+      LEFTMETA: LEFTALT
+      LEFTALT: LEFTMETA
+
+  - name: CapsLock Dual Role
+    remap:
+      CapsLock:
+        held: CTRL_L
+        alone: Esc
+        alone_timeout_millis: 500
+
+# /dev/input/event3 : AT Translated Set 2 keyboard
