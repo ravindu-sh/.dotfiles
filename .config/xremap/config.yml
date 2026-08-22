@@ -1,15 +1,52 @@
+default_mode: default
+
 modmap:
+  # Right-side swap: always active (even in gaming)
   - remap:
       102ND: RIGHTALT
       RIGHTALT: RIGHTMETA
+
+  # Left-side swap: default profile only
+  - name: Left Meta/Alt Swap
+    mode: default
+    remap:
       LEFTMETA: LEFTALT
       LEFTALT: LEFTMETA
 
+  # CapsLock dual role: default profile only
   - name: CapsLock Dual Role
+    mode: default
     remap:
       CapsLock:
         held: CTRL_L
         alone: Esc
         alone_timeout_millis: 500
 
-# /dev/input/event3 : AT Translated Set 2 keyboard
+  # - name: Esc to Grave (external keyboard)
+  #   mode: default
+  #   device:
+  #     only: "AT Translated Set 2 keyboard"
+  #   remap:
+  #     Esc: Grave
+
+keymap:
+  # Profile switcher
+  - name: Profile Switcher
+    remap:
+      Ctrl-F9: { set_mode: gaming }
+      Shift-F9: { set_mode: default }
+
+# modmap:
+#   - remap:
+#       102ND: RIGHTALT
+#       RIGHTALT: RIGHTMETA
+#       LEFTMETA: LEFTALT
+#       LEFTALT: LEFTMETA
+#
+#   - name: CapsLock Dual Role
+#     remap:
+#       CapsLock:
+#         held: CTRL_L
+#         alone: Esc
+#         alone_timeout_millis: 500
+#

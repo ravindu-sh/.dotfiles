@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+set -o vi
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
@@ -14,4 +16,9 @@ PS1='\[\e[36m\]\W\[\e[0m\]${PS1_CMD1:+ \[\e[32m\]${PS1_CMD1}\[\e[0m\]} \[\e[3
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+
 export PATH="/home/ravi/.cargo/bin:$PATH"
+
+export HISTSIZE=100000
+export HISTFILESIZE=200000
+
