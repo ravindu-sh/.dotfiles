@@ -22,3 +22,5 @@ export PATH="/home/ravi/.cargo/bin:$PATH"
 export HISTSIZE=100000
 export HISTFILESIZE=200000
 
+export PATH="$PATH:/home/ravi/.lmstudio/bin"
+

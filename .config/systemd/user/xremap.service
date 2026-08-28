@@ -1,0 +1,12 @@
+[Unit]
+Description=xremap key remapper service
+After=default.target
+
+[Service]
+Type=simple
+
+ExecStart=/home/ravi/.cargo/bin/xremap --watch /home/ravi/.config/xremap/config.yml
+Restart=always
+
+[Install]
+WantedBy=default.target
